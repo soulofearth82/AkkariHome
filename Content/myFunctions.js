@@ -203,3 +203,17 @@ function showForm() {
         }
         document.getElementById("captcha").innerHTML = captcha;
     }
+
+
+
+        function passdata() {
+            const flatid = document.getElementById('flatidd').value;
+            const fullname = document.getElementById('fullnamein').value;
+            const CardID = document.getElementById('Idcard').value;
+            const birthDate = document.getElementById('BirthDate').value;
+            const Mobileno = document.getElementById('mobileno').value;
+            const email = document.getElementById('emailid').value;
+            const url = `Result.html?flatidd=${flatid}&fullnamein=${fullname}&Idcard=${CardID}&BirthDate=${birthDate}&mobileno=${Mobileno}&emailid=${email}`;
+            window.location.href = url;
+            return false;
+        }
