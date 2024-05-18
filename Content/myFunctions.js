@@ -1,4 +1,4 @@
-﻿
+
 //load data to page 
 function loadData() {
 
@@ -94,6 +94,7 @@ function showForm() {
             var frm = document.getElementById('RSform');
             if (frm.classList.contains('containerhide')) {
                 frm.classList.remove('containerhide');
+                i++;
                 copyData([i]);
             }
         }
