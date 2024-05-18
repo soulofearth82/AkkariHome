@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عقاري هوم|Received Data </title>
+
+    <link href="Content/Style.css" rel="stylesheet" />
+    <script src="Content/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <div>
+            <a href="Home.html"><img src="Images/logo04.jpg" alt="Logo" width="150" id="logo" /></a>
+        </div>
+        <nav>
+
+            <ul>
+                <li>
+                    <a href="Home.html"> الرئيسية </a>
+                </li>
+                <li>
+                    <a href="Properties.html"> عقارات </a>
+                </li>
+                <li>
+                    <a href="AboutUs.html"> حول الشركة </a>
+                </li>
+
+                <li>
+                    <a href="CallUs.html"> اتصل بنا </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="receivedData" class="centered-text">
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        var Flatee = urlParams.get('flatidd');
+        var FullNamee = urlParams.get('fullnamein');
+        var IDCardd = urlParams.get('Idcard');
+        var BirthDatee = urlParams.get('BirthDate');
+        var Mobilee = urlParams.get('mobileno');
+        var Emaill = urlParams.get('emailid');
+        document.write(`
+     <section class="PageBG">
+        <table align="center">
+            <th colspan="2"><h1>البيانات المسجلة:</h1></th>
+            <tr>
+                <td><strong>رقم العقار:</strong></td>
+                <td>${Flatee}</td>
+            </tr>
+            <tr>
+                <td><strong>الاسم الكامل:</strong></td>
+                <td>${FullNamee}</td>
+            </tr>
+            <tr>
+                <td><strong>رقم الهوية:</strong></td>
+                <td>${IDCardd}</td>
+            </tr>
+            <tr>
+                <td><strong>تاريخ الميلاد:</strong></td>
+                <td>${BirthDatee}</td>
+            </tr>
+            <tr>
+                <td><strong>الموبايل:</strong></td>
+                <td>${Mobilee}</td>
+            </tr>
+            <tr>
+                <td><strong>الايميل الالكتروني:</strong></td>
+                <td>${Emaill}</td>
+            </tr>
+        </table>
+</section>
+`);
+
+    </script>
+    <script src="Content/myFunctions.js"></script>
+</body>
+</html>
